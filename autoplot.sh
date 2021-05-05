@@ -1,9 +1,11 @@
 #!/bin/sh
 
-export FARMER_KEY="example1"
-export POOL_KEY="example2"
-export THREADS=2
-export MEMORY=4500
+export THREADS=$1
+export MEMORY=$2
+export FARMER_KEY=$3
+export POOL_KEY=$4
+export STORJ_ACCESS=$5
+export STORJ_BUCKET=$6
 
 # update system and install deps
 sudo apt update
