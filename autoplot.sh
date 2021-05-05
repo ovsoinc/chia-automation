@@ -161,6 +161,12 @@ plotting:
         pool_pk: $POOL_KEY
 EOL
 
+cd ~
+wget https://raw.githubusercontent.com/ovsoinc/chia-automation/main/splitter
+wget https://raw.githubusercontent.com/ovsoinc/chia-automation/main/plot-watcher
+chmod +x splitter
+chmod +x plot-watcher
+
 # start tmux and plotting
 tmux new \; \
   send-keys 'zenith' C-m \; \
@@ -174,3 +180,15 @@ tmux new \; \
   send-keys 'cd ~' C-m \; \
   send-keys 'plotman interactive' C-m \; \
   new-window \; \
+  send-keys 'cd ~' C-m \; \
+  send-keys '/home/ubuntu/splitter' C-m \; \
+  new-window \; \
+  send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread0' C-m \; \
+  split-window -v \;\
+  send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread1' C-m \; \
+  new-window \; \
+  send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread2' C-m \; \
+  split-window -v \;\
+  send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread3' C-m \; \
+  new-window \; \
+  send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread4' C-m \; \
