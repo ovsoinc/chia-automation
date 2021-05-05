@@ -10,7 +10,7 @@ export STORJ_BUCKET=$6
 # update system and install deps
 sudo apt update
 sudo apt upgrade -y
-sudo apt-get install tmux iftop git -y
+sudo apt-get install tmux iftop git unzip -y
 
 # install storj uplink
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip -o uplink_linux_amd64.zip
