@@ -19,6 +19,9 @@ chmod 755 uplink
 sudo mv uplink /usr/local/bin/uplink
 rm uplink_linux_amd64.zip
 
+# setup storj uplink
+uplink import $STORJ_BUCKET $STORJ_ACCESS
+
 # install zenith
 curl -s https://api.github.com/repos/bvaisvil/zenith/releases/latest | grep browser_download_url | grep linux | cut -d '"' -f 4 | wget -qi -
 rm zenith.x86_64-unknown-linux-musl.tgz.sha256
