@@ -1,0 +1,26 @@
+#!/bin/bash
+
+export ACCESS="gabe";
+export BUCKET="gabe";
+export PLOTS=$1;
+
+mkdir -p "$PLOTS";
+
+set -e; # exit if any command errors
+shopt -s nullglob; # allow empty glob
+
+while true; do
+        for s in $PLOTS/*.plot; do
+                export d="sj://$BUCKET/";
+
+                echo "PL: Copying \"$s\" to \"$d\"";
+
+                time uplink --access $ACCESS cp "$s" "$d";
+
+                echo "PL: Deleting \"$s\"";
+
+                rm "$s";
+        done
+
+        sleep 5;
+done

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+export THREADS=3;
+export DROPDIR="plots";
+export THREADDIR="thread";
+
+set -e; # exit if any command errors
+shopt -s nullglob; # allow empty glob
+
+I=0;
+T=0;
+
+while true; do
+        for s in $DROPDIR/*.plot; do
+                        export T=$(expr "$I" % "$THREADS");
+
+                        export D="thread$T/";
+
+                        echo "Moving $s to $D";
+
+                        mkdir -p "$D";
+                        mv "$s" "$D";
+
+                        I=$(expr "$I" + 1);
+        done
+
+        sleep 5;
+done
