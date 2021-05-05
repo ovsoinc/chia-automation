@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export THREADS=3;
+export THREADS=5;
 export DROPDIR="/home/ubuntu/finishedplots";
 export THREADDIR="/home/ubuntu/threads/thread";
 
