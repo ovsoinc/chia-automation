@@ -15,7 +15,7 @@ while true; do
 
                 echo "PL: Copying \"$s\" to \"$d\"";
 
-                time uplink --access $ACCESS cp "$s" "$d";
+                time uplink --access $ACCESS cp --metadata "{\"hostname\":\"$HOSTNAME\"}" "$s" "$d";
 
                 echo "PL: Deleting \"$s\"";
 
