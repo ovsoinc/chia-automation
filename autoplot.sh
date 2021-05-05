@@ -172,4 +172,5 @@ tmux new \; \
   send-keys 'cd ~/chia-blockchain' C-m \; \
   send-keys '. ./activate' C-m \; \
   send-keys 'cd ~' C-m \; \
-  send-keys 'plotman interactive' C-m \;
+  send-keys 'plotman interactive' C-m \; \
+  new-window \; \
