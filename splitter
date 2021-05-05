@@ -14,7 +14,7 @@ while true; do
         for s in $DROPDIR/*.plot; do
                         export T=$(expr "$I" % "$THREADS");
 
-                        export D="thread$T/";
+                        export D="THREADDIR$T/";
 
                         echo "Moving $s to $D";
 
