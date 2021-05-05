@@ -190,5 +190,3 @@ tmux new \; \
   send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread2' C-m \; \
   split-window -v \;\
   send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread3' C-m \; \
-  new-window \; \
-  send-keys '/home/ubuntu/plot-watcher /home/ubuntu/threads/thread4' C-m \; \
